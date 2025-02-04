@@ -11,7 +11,6 @@ function agregarAmigo(){
     } else{
         listaAmigos.push(amigo.trim());
     } 
-    console.log(listaAmigos);
     document.querySelector('#amigo').value = '';
     actualizaListaAmigos();
     document.getElementById('amigo').focus();
@@ -36,7 +35,6 @@ function sortearAmigo(){
     if(listaAmigos.length >0){
         amigoSorteado = listaAmigos[indexAmigos];
     } else {alert('Sin amigos en la lista, agrega alguno');}
-    console.log(amigoSorteado);
     document.getElementById('listaAmigos').innerHTML='';
     amigoHTML = document.getElementById('resultado');
     amigoHTML.innerHTML = `El amigo soteado es: ${amigoSorteado}`;
