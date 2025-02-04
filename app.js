@@ -18,5 +18,16 @@ function agregarAmigo(){
     } 
     console.log(listaAmigos);
     document.querySelector('#amigo').value = '';
+    actualizaListaAmigos();
     return;
+}
+
+function actualizaListaAmigos(){
+    let lista = document.getElementById('listaAmigos');
+    lista.innerHTML='';
+    for(let i=0 ; i < listaAmigos.length ; i++){
+        const li = document.createElement('li');
+        li.textContent = listaAmigos[i];
+        lista.appendChild(li);
+    }
 }
